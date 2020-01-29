@@ -7,10 +7,10 @@ steps:
   main_clone:
     type: "git-clone"
     description: "Cloning main repository..."
-    repo: "codefresh-contrib/preload-db-integration-tests"
-    revision: "master"
+    repo: "${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}"
+    revision: "${{CF_BRANCH}}"
+    git: github-guy
     title: "Checking out source code"
-    git: github
     stage: prepare
   package_my_app:
     stage: package
